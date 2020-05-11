@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>com.dumontsean.wow.addon.plugin</id>
+    <name>World of Warcraft Addon Project Generator</name>
+    <vendor email="sdumont92@gmail.com" url="https://dumontsean.com">Sean Dumont</vendor>
+
+    <description><![CDATA[
+    This aims to be a World of Warcraft Addon Project Generator. </br>
+    Should include Lua SDK and other API Resources as well as some "com.example" files to start you off.
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products -->
+    <depends>com.intellij.modules.lang</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <moduleType id="WCA_MODULE" implementationClass="com.dumontsean.wow.addon.plugin.module.WcaModule"/>
+        <moduleBuilder builderClass="com.dumontsean.wow.addon.plugin.module.WcaModuleBuilder"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
